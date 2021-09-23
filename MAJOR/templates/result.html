@@ -1,0 +1,215 @@
+<!doctype html> 
+<html> 
+<head>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css">
+<!--For Table of bar graph-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.4/css/materialize.min.css">
+<style type="text/css">
+  
+.header-img {
+  width: 100%;
+  height: 100px;
+  background: url('https://raw.githubusercontent.com/sritar99/ChatApplication/master/WhatsApp%20Image%202021-05-06%20at%2010.48.05%20PM.jpeg');
+  background-size: cover;
+}
+.p {
+  font-family: "Lucida Console", "Courier New", monospace;
+  font-size: 27px;
+  font-weight: bold;
+  padding-top: 5px;
+}
+.p:after{
+content: "";
+  position: absolute;
+  top:0;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  background: linear-gradient(to right, #FF5733,#FFFFFF, #138808);
+}
+.mapplottable{
+ position: absolute; top: 60%; left: 37%; margin: -100px 0 0 -150px;
+}
+.obstable{
+  position: absolute; top: 40%; left: 79%; margin: -100px 0 0 -150px;
+}
+</style>
+</head>
+   <body> 
+   	<main>
+    <div class="header-img"></div>
+</main>
+  <center><h3 class="p">CLUSTER ANALYSIS OF GEOSPATIAL DATA UNDER PMAY</h3></center>
+
+<!-- wrapper -->
+<section id="section1" class="m-2 font-sans leading-normal flex">
+  <!-- card container -->
+  <div class="max-w-lg shadow-lg rounded overflow-hidden m-4 sm:flex">
+      <!-- card-content -->
+     <div class="px-6 py-4">
+      <h6 class="mb-2 font-black">Cluster Batch Number:</h6>
+        <p class="mb-4 text-grey-dark text-sm">{{ prediction }}</p>     
+      <h6 class="mb-2 font-black">Projects assigned under this cluster:</h6>
+        <p class="mb-4 text-grey-dark text-sm">{{ projCount }}</p>   
+          <h6 class="mb-2 font-black">Benid</h6>
+        <p class="mb-4 text-grey-dark text-sm">{{ benid }}</p>
+        <h6 class="mb-2 font-black">Present stage:</h6>
+        <p class="mb-4 text-grey-dark text-sm">{{ present_stage }}</p>
+        <h6 class="mb-2 font-black">Observername:</h6>
+        <p class="mb-4 text-grey-dark text-sm">{{ obsname }}</p>
+    </div>
+  </div> 
+</section>
+<!-- wrapper -->
+<section  class="m-2 font-sans leading-normal flex" >
+  <!-- card container -->
+  <div class="max-w-lg shadow-lg rounded overflow-hidden m-4 sm:flex">
+      <!-- card-content -->
+     <div class="px-6 py-4">
+      <h6 class="mb-2 font-black">--GeoTag Information--</h6>
+      <h6 class="mb-2 font-black">State:</h6>
+        <p class="mb-4 text-grey-dark text-sm">{{ State }}</p>     
+      <h6 class="mb-2 font-black">City:</h6>
+        <p class="mb-4 text-grey-dark text-sm">{{ City }}</p> 
+        <h6 class="mb-2 font-black">Village:</h6>
+        <p class="mb-4 text-grey-dark text-sm">{{ Village }}</p> 
+        <h6 class="mb-2 font-black">Mandal:</h6>
+        <p class="mb-4 text-grey-dark text-sm">{{ County }}</p> 
+        <h6 class="mb-2 font-black">Zipcode:</h6>
+        <p class="mb-4 text-grey-dark text-sm">{{ Zipcode }}</p>        
+    </div>
+  </div> 
+</section>
+<section class="mapplottable">
+<div>
+    <div >
+        <!-- <img src="foo.jpg" height="400" width="550" /> -->
+        <img id="picture" src="data:image/jpeg;base64,{{ img_data }}" width="550" height="400">
+
+    </div>
+</section>
+<!-- <section class="bartable">
+    <div >
+        <table class="striped">
+<thead>
+  <tr>
+      <th>Stage</th>
+      <th>Projects under</th>      
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>Not Started</td>
+    <td>{{ ns }}</td>
+  </tr>
+  <tr>
+    <td>Below Basement</td>
+    <td>{{ bbl }}</td>
+  </tr>
+  <tr>
+    <td>Basement</td>
+    <td>{{ bl }}</td>
+  </tr>
+  <tr>
+    <td>Lintel</td>
+    <td>{{ ll }}</td>
+  </tr> 
+  <tr>
+    <td>Roof cast</td>
+    <td>{{ rc }}</td>
+  </tr>
+  <tr>
+    <td>Roof</td>
+    <td>{{ rf }}</td>
+  </tr>
+  <tr>
+    <td>Roof Cast Individual Sanitary</td>
+    <td>{{ rcisl }}</td>
+  </tr>         
+</tbody>
+</table>
+    </div>
+</div>
+</section> -->
+<section class="obstable">
+    <div style="height:530px; width:400px; overflow:auto;">
+<table class="striped">
+  <caption><b>SURVEY FIELD OFFICIALS</b></caption>
+<thead>
+  <tr>
+      <th>OFFICIALS</th>
+      <th>ALLOTMENTS</th>      
+  </tr>
+</thead>
+{% for key, values in observerinfo.items(): %}
+<tbody>
+  <tr>
+        <td>{{key}}</td>
+        <td>{{values}}</td>
+    </tr>         
+</tbody>
+ {% endfor %}
+</table>
+    </div>
+</div>
+</section>
+
+   	   <!-- <h3>Cluster Batch Number:</h3>
+<h3>Projects assigned under this cluster:</h3>
+
+
+<h3>-GeoTag Information-</h3>
+<h3>State:</h3>
+<h3>City:</h3>
+<h3>Village:</h3>
+<h3>Zipcode:</h3>
+<h3>Mandal:</h3>
+
+<h3>-Progress of stages under this cluster-</h3>
+<h3>Not Started:</h3>
+<h3>Below Basement Level:</h3>
+<h3>Basement Level:</h3>
+<h3>Lintel Level:</h3>
+<h3>Roof cast Level:</h3>
+<h3>Roof Level:</h3>
+<h3>Roof Cast and Individual Sanitary Level:</h3>
+
+       <h3>{{ prediction }}</h3> 
+       <h3> {{ projCount }}</h3> 
+       <h3>&nbsp;</h3>
+       <h3>{{ State }}</h3> 
+       <h3>{{ City }}</h3>  
+       <h3>{{ Village }}</h3> 
+       <h3>{{ Zipcode }}</h3> 
+       <h3>{{ County }}</h3> 
+       <h3>&nbsp;</h3>
+
+
+
+
+       <h3>{{ ns }}</h3> 
+       <h3>{{ bbl }}</h3> 
+       <h3>{{ bl }}</h3> 
+       <h3>{{ ll }}</h3> 
+       <h3>{{ rc }}</h3> 
+       <h3>{{ rf }}</h3> 
+       <h3>{{ rcisl }}</h3>    
+
+<img id="picture" src="data:image/jpeg;base64,{{ img_data }}" width="250" height="250">
+
+
+
+-->
+       
+<!-- observer and cluster names -->   
+<!-- <table>
+    {% for key, values in observerinfo.items(): %}
+    <tr>
+        <td>{{key}}</td>
+        <td>{{values}}</td>
+    </tr>
+    {% endfor %}
+</table>  -->
+
+   </body> 
+</html> 

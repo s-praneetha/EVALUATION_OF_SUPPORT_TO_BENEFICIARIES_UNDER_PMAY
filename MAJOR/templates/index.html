@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="https://npmcdn.com/flickity@2/dist/flickity.css">
+<script type="text/javascript" src="https://npmcdn.com/flickity@2/dist/flickity.pkgd.js"></script>
+<style>
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  position: relative;
+  background-color: white;
+  font-family: "Roboto", helvetica, arial, sans-serif;
+  font-size: 1.5em;
+}
+.header-img {
+  width: 100%;
+  height: 100px;
+  background: url('https://raw.githubusercontent.com/sritar99/ChatApplication/master/WhatsApp%20Image%202021-05-06%20at%2010.48.05%20PM.jpeg');
+  background-size: cover;
+}
+.p {
+  font-family: "Lucida Console", "Courier New", monospace;
+  
+}
+.p:after{
+content: "";
+  position: absolute;
+  top:0;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  background: linear-gradient(to right, #FF5733,#FFFFFF, #138808);
+}
+.boxed{
+  width: 750px;
+  padding: 20px;
+  margin: 10px;
+}
+.login-form {
+  width: 100%;
+  padding: 2em;
+  position: relative;
+  background: #D0D3D4;
+  margin-left: 900px;
+  margin-top: -300px;
+}
+.login-form:before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  background: linear-gradient(to right, #FF5733,#FFFFFF, #138808);
+}
+
+@media screen and (min-width: 600px) {
+  .login-form {
+    width: 50vw;
+    max-width: 15em;
+  }
+}
+
+.flex-row {
+  display: -webkit-box;
+  display: flex;
+  margin-bottom: 1em;
+}
+
+.lf--label {
+  width: 2em;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+  background: #f5f6f8;
+  cursor: pointer;
+
+}
+
+.lf--input {
+  -webkit-box-flex: 1;
+          flex: 1;
+  padding: 1em;
+  border: 0;
+  color: #8f8f8f;
+  font-size: 1rem;
+}
+.lf--input:focus {
+  outline: none;
+  -webkit-transition: -webkit-transform 0.15s ease;
+  transition: -webkit-transform 0.15s ease;
+  transition: transform 0.15s ease;
+  transition: transform 0.15s ease, -webkit-transform 0.15s ease;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.lf--submit {
+  display: block;
+  padding: 1em;
+  width: 100%;
+  background: -webkit-gradient(linear, left top, right top, from(#35c3c1), to(#00d6b7));
+  background: linear-gradient(to right, #FF5733,#ECF0F1, #138808);
+  border: 0;
+  color: #fff;
+  cursor: pointer;
+  font-size: 0.75em;
+  font-weight: 600;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+}
+.lf--submit:focus {
+  outline: none;
+  -webkit-transition: -webkit-transform 0.15s ease;
+  transition: -webkit-transform 0.15s ease;
+  transition: transform 0.15s ease;
+  transition: transform 0.15s ease, -webkit-transform 0.15s ease;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+::-webkit-input-placeholder {
+  color: #8f8f8f;
+}
+
+::-moz-placeholder {
+  color: #8f8f8f;
+}
+
+:-ms-input-placeholder {
+  color: #8f8f8f;
+}
+
+::-ms-input-placeholder {
+  color: #8f8f8f;
+}
+
+::placeholder {
+  color: #8f8f8f;
+}
+
+.carousel {
+  top: 20px;
+}
+
+.carousel-cell {
+  width: 30%;
+  height: 200px;
+  counter-increment: gallery-cell; 
+}
+/* cell number */
+.carousel-cell:before {
+  display: block;
+  text-align: center;
+  line-height: 200px; 
+}
+
+.carousel-cell img{
+  width: 95%;
+  height: 200px;
+  padding-right: 10px;
+  border-radius: 5px;
+}
+
+</style>
+</head>
+<body>
+	<main>
+    <div class="header-img"></div>
+</main>
+	<center><h3 class="p">CLUSTER ANALYSIS OF GEOSPATIAL DATA UNDER PMAY</h3></center>
+	<div class="boxed">
+		<p style="text-align: justify; font-size:20px;">
+Pradhan Mantri Awas Yojana (Urban)-PMAY (U) Pradhan Mantri Awas Yojana (Urban) Mission launched on 25th June 2015 which intends to provide housing for all in urban areas by year 2022. The Mission provides Central Assistance to the implementing agencies through States/Union Territories (UTs) and Central Nodal Agencies (CNAs) for providing houses to all eligible families/ beneficiaries against the validated demand for houses for about 1.12 cr. As per PMAY(U) guidelines, the size of a house for Economically Weaker Section (EWS) could be upto 30 sq. mt. carpet area, however States/UTs have the flexibility to enhance the size of houses in consultation and approval of the Ministry.
+		</p>
+
+	</div>
+<form class='login-form' action="/result" method="POST">
+  <div class="flex-row">
+    <label class="lf--label" for="email">
+      <svg x="0px" y="0px" width="20px" height="20px">
+        <path fill="#B1B7C4" d="M10,1.375c-3.17,0-5.75,2.548-5.75,5.682c0,6.685,5.259,11.276,5.483,11.469c0.152,0.132,0.382,0.132,0.534,0c0.224-0.193,5.481-4.784,5.483-11.469C15.75,3.923,13.171,1.375,10,1.375 M10,17.653c-1.064-1.024-4.929-5.127-4.929-10.596c0-2.68,2.212-4.861,4.929-4.861s4.929,2.181,4.929,4.861C14.927,12.518,11.063,16.627,10,17.653 M10,3.839c-1.815,0-3.286,1.47-3.286,3.286s1.47,3.286,3.286,3.286s3.286-1.47,3.286-3.286S11.815,3.839,10,3.839 M10,9.589c-1.359,0-2.464-1.105-2.464-2.464S8.641,4.661,10,4.661s2.464,1.105,2.464,2.464S11.359,9.589,10,9.589"></path>
+			
+      </svg>
+    </label>
+    <input type="number" step="0.00000001" id="email" class='lf--input' placeholder='Latitude'  name="email">
+  </div>
+  <div class="flex-row">
+    <label class="lf--label" for="password">
+      <svg x="0px" y="0px" width="20px" height="20px">
+          <path fill="#B1B7C4" d="M10,1.375c-3.17,0-5.75,2.548-5.75,5.682c0,6.685,5.259,11.276,5.483,11.469c0.152,0.132,0.382,0.132,0.534,0c0.224-0.193,5.481-4.784,5.483-11.469C15.75,3.923,13.171,1.375,10,1.375 M10,17.653c-1.064-1.024-4.929-5.127-4.929-10.596c0-2.68,2.212-4.861,4.929-4.861s4.929,2.181,4.929,4.861C14.927,12.518,11.063,16.627,10,17.653 M10,3.839c-1.815,0-3.286,1.47-3.286,3.286s1.47,3.286,3.286,3.286s3.286-1.47,3.286-3.286S11.815,3.839,10,3.839 M10,9.589c-1.359,0-2.464-1.105-2.464-2.464S8.641,4.661,10,4.661s2.464,1.105,2.464,2.464S11.359,9.589,10,9.589"></path>
+     
+      </svg>
+    </label>
+    <input id="password" class='lf--input' step="0.00000001" placeholder='Longitude' type='number' name='password'>
+  </div>
+  <input class='lf--submit' type='submit' value='Submit'>
+
+<div>{{ msg }}</div>
+</form>
+<div style="padding-left: 25px;"> Glimpses of Beneficiary Led Construction(BLC) Houses
+</div>
+<div class="carousel" data-flickity='{  "autoPlay": true }'>
+	<div class="carousel-cell">
+  		
+    		<img src="https://pmay-urban.gov.in/storage/clss/Picture19.JPG">
+  		
+	</div>
+  <div class="carousel-cell"><img src="https://pmay-urban.gov.in/uploads/beneficiaries/houses/128014415064000013_Phoyang%20Rangjang_Arunachal%20%20%20%20Pradesh.JPG" ></div>
+  <div class="carousel-cell"><img src="https://pmay-urban.gov.in/uploads/beneficiaries/houses/1)%20248025181521500006-MARU%20ARVINDBHAI-Kalavad-Gujarat-Final-3.jpg" ></div>
+  <div class="carousel-cell"><img src="https://pmaymis.gov.in/assets/img/gallery/2.JPG" ></div>
+  <div class="carousel-cell"><img src="https://pmaymis.gov.in/assets/img/gallery/3.JPG"></div>
+  <div class="carousel-cell"><img src="https://pmay-urban.gov.in/storage/issr/Picture4.jpg"></div>
+  <div class="carousel-cell"><img src="https://pmay-urban.gov.in/uploads/beneficiaries/houses/128014295237800010_Phassang%20yatup%20_Arunachal%20%20%20%20Pradesh.jpg"></div>
+  <div class="carousel-cell"><img src="https://pmay-urban.gov.in/storage/issr/Picture6.jpg"></div>
+  <div class="carousel-cell"><img src="https://pmay-urban.gov.in/uploads/galleryphoto/Devaki%20K_UT_Puducherry_Mahe_final.jpg"></div>
+  <div class="carousel-cell"><img src="https://pmay-urban.gov.in/uploads/galleryphoto/Singam%20Cheruvu_Hyderabad%2017.jpg"></div>
+  <div class="carousel-cell"><img src="https://pmay-urban.gov.in/uploads/galleryphoto/SITANSHU%20HOWLADAR_Coopers%20Camp.JPG"></div>
+  <div class="carousel-cell"><img src="https://pmay-urban.gov.in/uploads/galleryphoto/WhatsApp%20Image%202018-12-15%20at%203.20.16%20PM.jpeg"></div>
+  <div class="carousel-cell"><img src="https://pmay-urban.gov.in/uploads/galleryphoto/Name-%20Dammala%20Pati%20Subbaiah_City-%20Vinukonda.jpeg"></div>
+  <div class="carousel-cell"><img src="https://pmay-urban.gov.in/storage/ahp/Picture6.jpg"></div>
+  <div class="carousel-cell"><img src="https://pmay-urban.gov.in/uploads/galleryphoto/Name-%20Smt.%20Lalamati_City%20Name-%20Dhubri.JPG"></div>
+  
+</div>
+
+
+</body>
+</html>
